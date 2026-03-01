@@ -18,12 +18,17 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Epilogue', sans-serif;
     color: var(--text-main);
     background-color: var(--bg-body);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -277,4 +282,5 @@ footer { background: var(--white); padding: 60px 5% 30px; border-top: 1px solid 
     /* Shrink floating buttons slightly so they don't block text */
     .floating-buttons { bottom: 20px; right: 20px; gap: 10px; }
     .float-btn { width: 50px; height: 50px; font-size: 1.2rem; }
+
 }
