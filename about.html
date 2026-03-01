@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Expert Diagnostics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>Expert Diagnostics</h1>
+                <span>एक्सपर्ट डायग्नोस्टिक्स</span>
+            </a>
+        </div>
+        
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" style="color: var(--primary-blue);">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tel:9607100116" class="btn-nav-call"><i class="fa-solid fa-phone"></i> 9607100116</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container animate-up delay-1">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 60px;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Our Standard of Care</h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted);">We built Expert Diagnostics on three pillars: absolute cleanliness, respectful service, and rapid results.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card animate-up delay-2">
+                <i class="fa-solid fa-sparkles" style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px;"></i>
+                <h3>Immaculate Environment</h3>
+                <p>We maintain strict clinical hygiene protocols to ensure a safe, sterile, and welcoming environment for every patient.</p>
+            </div>
+            <div class="card animate-up delay-3">
+                <i class="fa-solid fa-user-nurse" style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px;"></i>
+                <h3>Polite, Expert Staff</h3>
+                <p>Our phlebotomists and technicians are highly trained not just in medical precision, but in compassionate patient care.</p>
+            </div>
+            <div class="card animate-up delay-4">
+                <i class="fa-solid fa-bolt" style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 20px;"></i>
+                <h3>Fast, Accurate Reporting</h3>
+                <p>State-of-the-art machinery ensures zero errors and rapid report generation, so your doctor can proceed with treatment immediately.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 style="margin-bottom: 15px;">Expert Diagnostics</h3>
+                <p>Ambernath West, Maharashtra<br>Open 24/7 for all medical testing needs.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 15px;">Emergency Contact</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 9607100116</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +91 9607100116</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Expert Diagnostics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/919607100116" class="float-btn float-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:9607100116" class="float-btn float-call"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <script>
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const mobileIcon = mobileBtn.querySelector('i');
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if(navLinks.classList.contains('active')) {
+                mobileIcon.classList.remove('fa-bars');
+                mobileIcon.classList.add('fa-xmark');
+            } else {
+                mobileIcon.classList.remove('fa-xmark');
+                mobileIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Diagnostics | 24/7 Diagnostic Center in Ambernath</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>Expert Diagnostics</h1>
+                <span>एक्सपर्ट डायग्नोस्टिक्स</span>
+            </a>
+        </div>
+        
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" style="color: var(--primary-blue);">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="tel:9607100116" class="btn-nav-call"><i class="fa-solid fa-phone"></i> 9607100116</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="animate-up delay-1">
+                <span class="badge-247">OPEN 24 HOURS</span>
+                <div class="rating-badge">
+                    <span class="stars">★★★★★</span>
+                    <span>5.0 Rating (157+ Reviews)</span>
+                </div>
+            </div>
+            <h1 class="animate-up delay-2">Precision Diagnostics. <br>Unwavering Trust.</h1>
+            <p class="animate-up delay-3">Ambernath's premier 24/7 diagnostic center. Fast, accurate, and completely hassle-free medical testing.</p>
+            <div class="hero-buttons animate-up delay-4">
+                <a href="tel:9607100116" class="btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/919607100116" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="usp-section">
+        <div class="usp-content animate-up">
+            <i class="fa-solid fa-house-medical-circle-check" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px;"></i>
+            <h2>The Only Center Providing Premium Pickup & Drop Service</h2>
+            <p>From your home, hospital, or clinic. We prioritize your comfort so you don't have to stress about traveling while unwell.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 style="margin-bottom: 15px;">Expert Diagnostics</h3>
+                <p>Ambernath West, Maharashtra<br>Open 24/7 for all medical testing needs.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 15px;">Emergency Contact</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 9607100116</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +91 9607100116</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Expert Diagnostics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/919607100116" class="float-btn float-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:9607100116" class="float-btn float-call"><i class="fa-solid fa-phone"></i></a>
+    </div>
+
+    <script>
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const mobileIcon = mobileBtn.querySelector('i');
+
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            if(navLinks.classList.contains('active')) {
+                mobileIcon.classList.remove('fa-bars');
+                mobileIcon.classList.add('fa-xmark');
+            } else {
+                mobileIcon.classList.remove('fa-xmark');
+                mobileIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

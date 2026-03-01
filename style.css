@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600&family=Outfit:wght@400;500;700;800&display=swap');
+
+:root {
+    --primary-dark: #0A192F;
+    --primary-blue: #0052FF;
+    --primary-light: #E6F0FF;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --white: #FFFFFF;
+    --gold: #F59E0B;
+    --whatsapp: #25D366;
+    --bg-body: #F8FAFC;
+    --shadow-soft: 0 20px 40px rgba(0, 82, 255, 0.08);
+    --shadow-hover: 0 30px 60px rgba(0, 82, 255, 0.15);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --- NAVIGATION --- */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 { font-size: 1.8rem; letter-spacing: -0.5px; line-height: 1.2; }
+.logo span { display: block; font-size: 0.9rem; color: var(--text-muted); font-family: 'Epilogue', sans-serif; }
+
+nav ul { display: flex; gap: 30px; list-style: none; align-items: center; }
+nav a { font-weight: 600; font-size: 1rem; transition: color 0.3s ease; }
+nav a:hover { color: var(--primary-blue); }
+
+.btn-nav-call {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 82, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+.btn-nav-call:hover { transform: translateY(-2px); color: var(--white); }
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--primary-dark);
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+/* --- UTILITIES & ANIMATIONS --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 80px 5%; }
+.text-center { text-align: center; }
+
+@keyframes slideUpFade {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-up {
+    opacity: 0;
+    animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* --- HERO SECTION --- */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(circle at top right, var(--primary-light), transparent 50%),
+                radial-gradient(circle at bottom left, #ffffff, var(--bg-body) 70%);
+    padding: 0 5%;
+}
+
+.hero-content { max-width: 650px; }
+.badge-247 {
+    display: inline-block;
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+}
+.rating-badge { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; font-weight: 600; }
+.stars { color: var(--gold); font-size: 1.2rem; }
+
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1.5px; }
+.hero p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 40px; }
+
+.hero-buttons { display: flex; gap: 16px; }
+.btn-primary, .btn-whatsapp {
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+.btn-primary { background: var(--primary-blue); color: var(--white); box-shadow: 0 10px 30px rgba(0, 82, 255, 0.3); }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(0, 82, 255, 0.4); }
+.btn-whatsapp { background: var(--whatsapp); color: var(--white); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3); }
+.btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4); }
+
+/* --- USP SECTION --- */
+.usp-section {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 80px 5%;
+    position: relative;
+    overflow: hidden;
+}
+.usp-section::before {
+    content: ''; position: absolute; top: -50%; right: -10%; width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(0,82,255,0.4) 0%, transparent 70%);
+    border-radius: 50%;
+}
+.usp-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; text-align: center; }
+.usp-content h2 { color: var(--white); font-size: 3rem; margin-bottom: 20px; }
+.usp-content p { font-size: 1.2rem; color: #94A3B8; }
+
+/* --- GRIDS & CARDS --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+.card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
+.card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+.card p { color: var(--text-muted); }
+
+/* --- FLOATING BUTTONS --- */
+.floating-buttons {
+    position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 999;
+}
+.float-btn {
+    width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    color: var(--white); font-size: 1.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.2); transition: transform 0.3s;
+}
+.float-btn:hover { transform: scale(1.1); color: var(--white); }
+.float-call { background: var(--primary-blue); }
+.float-wa { background: var(--whatsapp); }
+
+/* --- FOOTER --- */
+footer { background: var(--white); padding: 60px 5% 30px; border-top: 1px solid rgba(0,0,0,0.05); }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+.footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.05); color: var(--text-muted); }
+
+/* ========================================= */
+/* --- RESPONSIVE MOBILE & TABLET DESIGN --- */
+/* ========================================= */
+
+/* Tablet / Small Desktop */
+@media (max-width: 992px) {
+    .hero h1 { font-size: 3.2rem; }
+    .contact-grid { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+        text-align: center; 
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    /* Header & Slide-out Menu */
+    header { 
+        display: flex;
+        flex-direction: row; /* Forces logo and button to sit side-by-side */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%; 
+    }
+    
+    .mobile-menu-btn { 
+        display: block; 
+        margin-left: auto; /* This completely forces the button to the far right edge */
+    }
+
+    /* ... keep your existing nav ul code right below this ... */
+
+    nav ul { 
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hides the menu off-screen initially */
+        width: 280px;
+        height: 100vh;
+        background: var(--white);
+        box-shadow: -10px 0 30px rgba(0, 82, 255, 0.1);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        gap: 25px;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 999;
+    }
+
+    nav ul.active { right: 0; /* Slides the menu in when button is clicked */ }
+    
+    nav ul li { text-align: center; width: 100%; }
+    
+    .btn-nav-call { display: inline-block; margin-top: 10px; }
+
+    /* Hero Section */
+    .hero { min-height: auto; padding: 60px 5%; text-align: center; }
+    .hero-content { margin: 0 auto; }
+    .hero h1 { font-size: 2.4rem; letter-spacing: -1px; }
+    .hero p { font-size: 1.1rem; }
+    
+    /* Buttons Full Width */
+    .hero-buttons { flex-direction: column; width: 100%; gap: 12px; }
+    .btn-primary, .btn-whatsapp { justify-content: center; width: 100%; }
+    
+    /* USP Section */
+    .usp-section { padding: 50px 5%; text-align: center; }
+    .usp-content h2 { font-size: 1.8rem; }
+    
+    /* General Spacing & Typography */
+    .container { padding: 50px 5%; }
+    
+    /* Fix for large inline headers on sub-pages */
+    h1[style*="font-size: 3.5rem"] { font-size: 2.2rem !important; margin-bottom: 10px !important; }
+    
+    /* Grids */
+    .grid { grid-template-columns: 1fr; gap: 20px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .logo h1 { font-size: 1.5rem; }
+    .hero h1 { font-size: 2rem; }
+    .card { padding: 25px; }
+    
+    /* Shrink floating buttons slightly so they don't block text */
+    .floating-buttons { bottom: 20px; right: 20px; gap: 10px; }
+    .float-btn { width: 50px; height: 50px; font-size: 1.2rem; }
+}
